@@ -1,0 +1,7 @@
+{
+  "presets": ["babel-preset-es2015"],
+  "plugins": [
+    "babel-plugin-syntax-class-properties",
+    "babel-plugin-transform-class-properties"
+  ]
+}
