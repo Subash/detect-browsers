@@ -4,7 +4,7 @@
     "version": "3.0.0",
     "homepage": "https://github.com/Subash/detect-browsers",
     "license": "MIT",
-    "main": "index.js",
+    "main": "lib/index.js",
     "scripts": {
       "prepublish": "gulp prepublish"
     },
