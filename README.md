@@ -1,6 +1,6 @@
 ### Detect browsers installed on a machine
 
-```
+```javascript
 //import
 import * as detectBrowsers from 'detect-browsers';
 
