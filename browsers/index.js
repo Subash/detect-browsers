@@ -5,6 +5,7 @@ module.exports = {
     firefoxAurora: require('./FirefoxAurora.js'),
     firefoxNightly: require('./FirefoxNightly.js'),
     ie: require('./IE.js'),
+    edge: require('./Edge.js'),
     opera: require('./Opera.js'),
     safari: require('./Safari.js'),
     safariTechPreview: require('./SafariTechPreview.js'),

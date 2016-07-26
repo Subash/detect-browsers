@@ -1,5 +1,5 @@
 module.exports = {
-    name: 'IE',
+    name: 'Internet Explorer',
     DEFAULT_CMD: {
         win32: [
             process.env.ProgramW6432 + '\\Internet Explorer\\iexplore.exe',
