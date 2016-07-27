@@ -54,9 +54,9 @@ function openBrowser({ name, executablePath }, address) {
   if(process.platform === 'darwin' && ['Safari', 'Firefox'].includes(name)) {
     spawn('open', ['-a', name, address], { detached: true});
   } else if(process.platform === 'win32' && name === 'Microsoft Edge') {
-    spawn('start', [`microsoft-edge:${address}`], { detached: true});
+    spawn('start', ['/c', `start microsoft-edge:${address}`], { detached: true, env: process.env });
   } else {
-    spawn(browser.executablePath, [address], { detached: true});
+    spawn(executablePath, [address], { detached: true});
   }
 }
 
