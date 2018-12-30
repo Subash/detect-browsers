@@ -1,12 +1,12 @@
 module.exports = {
-    chrome: require('./Chrome.js'),
-    chromeCanary: require('./ChromeCanary.js'),
-    firefox: require('./Firefox.js'),
-    firefoxAurora: require('./FirefoxAurora.js'),
-    firefoxNightly: require('./FirefoxNightly.js'),
-    ie: require('./IE.js'),
-    edge: require('./Edge.js'),
-    opera: require('./Opera.js'),
-    safari: require('./Safari.js'),
-    safariTechPreview: require('./SafariTechPreview.js'),
+  'Google Chrome Canary': require('./chrome-canary'),
+  'Google Chrome': require('./chrome'),
+  'Microsoft Edge': require('./edge'),
+  'Firefox Developer Edition': require('./firefox-developer-edition'),
+  'Firefox Nightly': require('./firefox-nightly'),
+  'Firefox': require('./firefox'),
+  'Internet Explorer': require('./internet-explorer'),
+  'Opera': require('./opera'),
+  'Safari Technology Preview': require('./safari-tech-preview'),
+  'Safari': require('./safari')
 };

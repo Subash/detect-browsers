@@ -2,25 +2,15 @@
 
 ```javascript
 //import
-import * as detectBrowsers from 'detect-browsers';
+import browsers from 'detect-browsers';
 
-//require
-const detectBrowsers = require('detect-browsers');
+//Get installed browsers
+browsers.getInstalledBrowsers()
+  .then( list=> console.log(list))
+  .catch( error => console.error(error));
 
-//async
-detectBrowsers.getInstalledBrowsers()
-  .then( browsers => console.log(browsers))
-  .catch( error => console.error(error))
-
-//sync
-const browsers = detectBrowsers.getInstalledBrowsersSync();
-console.log(browsers);
-
-//Experimental async/await
-//Must be inside another async function
-const browsers = await detectBrowsers.getInstalledBrowsers();
-console.log(browsers);
-
+//Open browser
+browsers.openBrowser('Google Chrome');
 ```
 
 License -> MIT
