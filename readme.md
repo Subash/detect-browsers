@@ -9,7 +9,7 @@ browsers.getInstalledBrowsers()
   .catch( error => console.error(error));
 
 //Open browser
-browsers.openBrowser('Google Chrome');
+browsers.openBrowser('Google Chrome', 'https://subashpathak.com');
 ```
 
 License -> MIT
