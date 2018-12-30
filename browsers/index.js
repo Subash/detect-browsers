@@ -1,7 +1,7 @@
 module.exports = {
   'Google Chrome Canary': require('./chrome-canary'),
   'Google Chrome': require('./chrome'),
-  'Microsoft Edge': require('./edge'),
+  'Edge': require('./edge'),
   'Firefox Developer Edition': require('./firefox-developer-edition'),
   'Firefox Nightly': require('./firefox-nightly'),
   'Firefox': require('./firefox'),
