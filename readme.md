@@ -1,8 +1,7 @@
 ### Detect browsers installed on a machine
 
 ```javascript
-//import
-import browsers from 'detect-browsers';
+const browsers = require('detect-browsers');
 
 //Get installed browsers
 browsers.getInstalledBrowsers()
