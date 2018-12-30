@@ -1,3 +1,2 @@
-.git*
-.idea
-/src
+.git
+node_modules
