@@ -1,4 +1,4 @@
-### Detect browsers installed on a machine
+### Detect Installed Browsers
 
 ```javascript
 const browsers = require('detect-browsers');
