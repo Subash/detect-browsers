@@ -4,7 +4,7 @@
 const browsers = require('detect-browsers');
 
 //Get installed browsers
-browsers.getInstalledBrowsers()
+browsers.getAvailableBrowsers()
   .then( list => console.log(list))
   .catch( error => console.error(error));
 

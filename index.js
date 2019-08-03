@@ -12,7 +12,7 @@ async function getExecutable(browser) {
   }
 }
 
-async function getInstalledBrowsers() {
+async function getAvailableBrowsers() {
   const list = [];
   for(const browser of Object.keys(browsers)) {
     const exec = await getExecutable(browser);
@@ -27,9 +27,10 @@ async function openBrowser(browser, address) {
     env: process.env
   };
 
-  //Use open command to open browser in macOS
+  // Use open command to open browsers in macOS
   if(process.platform === 'darwin') {
-    return spawn('open', [ '-a', browser, address ], options);
+    spawn('open', [ '-a', browser, address ], options);
+    return;
   }
 
   // Edge can not be started by running the executable
@@ -40,12 +41,12 @@ async function openBrowser(browser, address) {
 
   //Spawn the executable
   const exec = await getExecutable(browser);
-  if(!exec) return;
-  spawn(exec, [ address ], options);
+  if(exec) spawn(exec, [ address ], options);
 }
 
 module.exports = {
-  getInstalledBrowsers,
+  getAvailableBrowsers,
+  getInstalledBrowsers: getAvailableBrowsers, // legacy api
   getExecutable,
   openBrowser
 };
