@@ -32,9 +32,10 @@ async function openBrowser(browser, address) {
     return spawn('open', [ '-a', browser, address ], options);
   }
 
-  //Edge can not be started by running the executable o_O
-  if(browser === 'Microsoft Edge') {
-    return spawn('cmd.exe', [ '/c', `start microsoft-edge:${address}` ], options);
+  // Edge can not be started by running the executable
+  if(browser === 'Edge') {
+    spawn(`start microsoft-edge:"${address}"`, { ...options, shell: true });
+    return;
   }
 
   //Spawn the executable
