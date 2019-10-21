@@ -1,15 +1,14 @@
 ### Detect Installed Browsers
 
 ```javascript
-const browsers = require('detect-browsers');
+const detectBrowsers = require('detect-browsers');
 
-//Get installed browsers
-browsers.getAvailableBrowsers()
-  .then( list => console.log(list))
+// get installed browsers
+detectBrowsers.getAvailableBrowsers()
+  .then(browsers => {
+    detectBrowsers.launchBrowser(browsers[0], 'https://subashpathak.com')
+  })
   .catch( error => console.error(error));
-
-//Open browser
-browsers.openBrowser('Google Chrome', 'https://subashpathak.com');
 ```
 
 License -> MIT

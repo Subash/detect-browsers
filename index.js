@@ -16,37 +16,34 @@ async function getAvailableBrowsers() {
   const list = [];
   for(const browser of Object.keys(browsers)) {
     const exec = await getExecutable(browser);
-    if(exec) list.push(browser);
+    if(exec) list.push({ browser, path: exec });
   }
   return list;
 }
 
-async function openBrowser(browser, address) {
+async function launchBrowser(browser, address) {
   const options = {
     detached: true,
     env: process.env
   };
 
-  // Use open command to open browsers in macOS
+  // use open command to open browsers in macOS
   if(process.platform === 'darwin') {
-    spawn('open', [ '-a', browser, address ], options);
+    spawn('open', [ '-a', browser.browser, address ], options);
     return;
   }
 
-  // Edge can not be started by running the executable
-  if(browser === 'Edge') {
+  // edge can not be started by running the executable
+  if(browser.browser === 'Edge') {
     spawn(`start microsoft-edge:"${address}"`, { ...options, shell: true });
     return;
   }
 
-  //Spawn the executable
-  const exec = await getExecutable(browser);
-  if(exec) spawn(exec, [ address ], options);
+  // spawn the executable
+  spawn(browser.path, [ address ], options);
 }
 
 module.exports = {
   getAvailableBrowsers,
-  getInstalledBrowsers: getAvailableBrowsers, // legacy api
-  getExecutable,
-  openBrowser
+  launchBrowser
 };
