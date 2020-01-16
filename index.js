@@ -29,6 +29,11 @@ async function launchBrowser(browser, address) {
 
   // use open command to open browsers in macOS
   if(process.platform === 'darwin') {
+
+    try {
+      address = decodeURI(address); // open re-encodes the url so try decoding it
+    } catch(err) {};
+
     spawn('open', [ '-a', browser.browser, address ], options);
     return;
   }
