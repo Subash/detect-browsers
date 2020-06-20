@@ -1,6 +1,5 @@
-const { promisify } = require('util');
+const which = require('which');
 const { spawn } = require('child_process');
-const which = promisify(require('which'));
 const browsers = require('./browsers');
 
 async function getExecutable(browser) {
@@ -38,13 +37,13 @@ async function launchBrowser(browser, address) {
     return;
   }
 
-  // edge can not be started by running the executable
-  if(browser.browser === 'Edge') {
+  // edge can not be started by spawning the executable
+  if(browser.browser === 'Legacy Edge') {
     spawn(`start microsoft-edge:"${address}"`, { ...options, shell: true });
     return;
   }
 
-  // spawn the executable
+  // spawn the executable for all other browsers and platforms
   spawn(browser.path, [ address ], options);
 }
 
