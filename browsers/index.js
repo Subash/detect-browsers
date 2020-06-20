@@ -1,5 +1,6 @@
 module.exports = {
   'Brave Browser': require('./brave'),
+  'Chromium': require('./chromium'),
   'Firefox Developer Edition': require('./firefox-developer-edition'),
   'Firefox Nightly': require('./firefox-nightly'),
   'Firefox': require('./firefox'),
