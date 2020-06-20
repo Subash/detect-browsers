@@ -6,7 +6,6 @@ module.exports = {
   'Google Chrome Canary': require('./chrome-canary'),
   'Google Chrome': require('./chrome'),
   'Internet Explorer': require('./internet-explorer'),
-  'Legacy Edge': require('./legacy-edge'),
   'Microsoft Edge': require('./microsoft-edge'),
   'Opera': require('./opera'),
   'Safari Technology Preview': require('./safari-tech-preview'),

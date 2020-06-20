@@ -37,8 +37,8 @@ async function launchBrowser(browser, address) {
     return;
   }
 
-  // edge can not be started by spawning the executable
-  if(browser.browser === 'Legacy Edge') {
+  // legacy edge can not be started by spawning the executable
+  if(browser.path && browser.path.endsWith('MicrosoftEdge.exe')) {
     spawn(`start microsoft-edge:"${address}"`, { ...options, shell: true });
     return;
   }
