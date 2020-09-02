@@ -1,5 +1,5 @@
 module.exports = {
-  linux: ['firefox'],
+  linux: ['firefox', 'firefox-stable'],
   darwin: ['/Applications/Firefox.app/Contents/MacOS/firefox-bin'],
   win32: [
     process.env.LOCALAPPDATA + '\\Mozilla Firefox\\firefox.exe',

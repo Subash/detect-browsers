@@ -1,4 +1,5 @@
 module.exports = {
+  linux: ['firefox-nightly'],
   darwin: ['/Applications/Firefox Nightly.app/Contents/MacOS/firefox-bin'],
   win32: [
     process.env.LOCALAPPDATA + '\\Firefox Nightly\\firefox.exe',
