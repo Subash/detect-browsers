@@ -1,4 +1,5 @@
 module.exports = {
+  linux: ['firefox-developer-edition'],
   darwin: ['/Applications/Firefox Developer Edition.app/Contents/MacOS/firefox-bin'],
   win32: [
     process.env.LOCALAPPDATA + '\\Firefox Developer Edition\\firefox.exe',
