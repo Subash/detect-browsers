@@ -6,6 +6,9 @@
   "repository": "https://github.com/Subash/detect-browsers",
   "license": "MIT",
   "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
   "dependencies": {
     "which": "^2.0.2"
   },
