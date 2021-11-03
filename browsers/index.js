@@ -11,5 +11,9 @@ module.exports = {
   'Opera': require('./opera'),
   'Safari Technology Preview': require('./safari-tech-preview'),
   'Safari': require('./safari'),
-  'Vivaldi': require('./vivaldi')
+  'Vivaldi': require('./vivaldi'),
+  'Brave Nightly': require('./brave-nightly'),
+  'Brave Beta': require('./brave-beta'),
+  'Chrome Beta': require('./chrome-beta'),
+  'Firefox Beta': require('./firefox-beta'),
 };
