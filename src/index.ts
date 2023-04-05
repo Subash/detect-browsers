@@ -1,7 +1,7 @@
 import { spawn } from 'child_process';
 import which from 'which';
 import browsers from './browsers';
-import { Browser } from './browsers/types';
+import type { Browser } from './browsers/types';
 export type { Browser } from './browsers/types';
 
 export type BrowserName = keyof typeof browsers;
