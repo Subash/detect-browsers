@@ -1,4 +1,6 @@
-module.exports = {
+import type { PossibleExecutables } from './types';
+
+export default {
   linux: ['firefox'],
   darwin: ['/Applications/Firefox.app/Contents/MacOS/firefox-bin'],
   win32: [
@@ -7,4 +9,4 @@ module.exports = {
     process.env.ProgramFiles + '\\Mozilla Firefox\\firefox.exe',
     process.env['ProgramFiles(x86)'] + '\\Mozilla Firefox\\firefox.exe'
   ]
-};
+} as PossibleExecutables;
