@@ -3,7 +3,8 @@ import type { PossibleExecutables } from './types';
 export default {
   linux: ['firefox-developer-edition'],
   darwin: [
-    '/Applications/Firefox Developer Edition.app/Contents/MacOS/firefox-bin'
+    '/Applications/Firefox Developer Edition.app/Contents/MacOS/firefox-bin',
+    '/Applications/Firefox Developer Edition.app/Contents/MacOS/firefox'
   ],
   win32: [
     process.env.LOCALAPPDATA + '\\Firefox Developer Edition\\firefox.exe',
