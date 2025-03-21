@@ -1,6 +1,7 @@
 import brave from './brave';
 import chrome from './chrome';
 import chromeCanary from './chrome-canary';
+import chromeDev from './chrome-dev';
 import chromium from './chromium';
 import firefox from './firefox';
 import firefoxDeveloperEdition from './firefox-developer-edition';
@@ -19,6 +20,7 @@ export default {
   'Firefox Nightly': firefoxNightly,
   'Firefox': firefox,
   'Google Chrome Canary': chromeCanary,
+  'Google Chrome Dev': chromeDev,
   'Google Chrome': chrome,
   'Internet Explorer': internetExplorer,
   'Microsoft Edge': microsoftEdge,
