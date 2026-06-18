@@ -1,7 +1,7 @@
 {
   "name": "detect-browsers",
   "description": "Detect browsers installed on a system.",
-  "version": "6.1.0",
+  "version": "6.2.0",
   "homepage": "https://github.com/Subash/detect-browsers",
   "repository": "https://github.com/Subash/detect-browsers",
   "license": "MIT",
@@ -19,6 +19,6 @@
   "devDependencies": {
     "@types/which": "^3.0.0",
     "jest": "^29.5.0",
-    "typescript": "^5.0.3"
+    "typescript": "~5.2.0"
   }
 }

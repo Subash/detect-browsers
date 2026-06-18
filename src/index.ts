@@ -21,7 +21,7 @@ export async function getAvailableBrowsers(): Promise<Browser[]> {
     const executable = await getExecutable(browser);
     if (executable) list.push({ browser, executable });
   }
-  return list;
+  return list.toSorted((a, b) => a.browser.localeCompare(b.browser));
 }
 
 async function launchBrowserMac(
